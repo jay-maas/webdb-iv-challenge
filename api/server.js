@@ -1,12 +1,17 @@
 const express = require('express');
 const timestamp = require('time-stamp')
 
-const router = require('./routes/router.js')
+const dishesRouter = require('./routes/dishesRouter.js')
+const ingredientsRouter = require('./routes/ingredientsRouter.js')
+const recipesRouter = require('./routes/recipesRouter.js')
 
 const server = express();
 
 server.use(logger)
-server.use('/api/route', router)
+server.use('/api/dishes', dishesRouter)
+server.use('/api/ingredients', ingredientsRouter)
+server.use('/api/recipes', recipesRouter)
+
 
 server.get('/', (req, res) => {
     res.send(`
