@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": ".\\data\\database.db3",
+            "dialect": "SQLite",
+            "name": "Recipe Book"
+        }
+    ]
+}
